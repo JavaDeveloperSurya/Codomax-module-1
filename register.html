@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register — Codomax Blog</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-logo">CD</span> Codomax Blog
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="create-blog.html">Create Blog</a>
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="nav-actions" id="navAuth"></div>
+        <button class="icon-btn" id="themeToggle" title="Toggle dark mode">🌙</button>
+        <button class="icon-btn nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="auth-wrap">
+      <div class="auth-card">
+        <h1>Create your account</h1>
+        <p class="muted" style="margin-bottom:24px">It takes less than a minute.</p>
+
+        <form id="registerForm" novalidate>
+          <div class="form-group">
+            <label for="regName">Full name</label>
+            <input type="text" id="regName" placeholder="Aarav Sharma" autocomplete="name" />
+            <span class="field-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="regEmail">Email address</label>
+            <input type="email" id="regEmail" placeholder="you@example.com" autocomplete="email" />
+            <span class="field-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="regPassword">Password</label>
+            <input type="password" id="regPassword" placeholder="At least 6 characters" autocomplete="new-password" />
+            <span class="field-error"></span>
+            <div class="strength"><div class="strength-bar" id="strengthBar"></div></div>
+            <small class="muted" id="strengthLabel"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="regConfirm">Confirm password</label>
+            <input type="password" id="regConfirm" placeholder="Re-enter your password" autocomplete="new-password" />
+            <span class="field-error"></span>
+          </div>
+
+          <label class="checkbox" style="margin-bottom:20px">
+            <input type="checkbox" id="regTerms" />
+            I agree to the terms and conditions
+          </label>
+
+          <button type="submit" class="btn btn-block">Create account</button>
+        </form>
+
+        <div class="divider">or</div>
+
+        <a class="btn btn-outline btn-block" href="login.html">🔐 Continue with demo account</a>
+
+        <p class="auth-alt">
+          Already registered? <a href="login.html">Sign in</a>
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> Codomax Digital · MERN Internship — Module 1</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="login.html">Login</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

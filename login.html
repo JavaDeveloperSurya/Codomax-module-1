@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login — Codomax Blog</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-logo">CD</span> Codomax Blog
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="create-blog.html">Create Blog</a>
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="nav-actions" id="navAuth"></div>
+        <button class="icon-btn" id="themeToggle" title="Toggle dark mode">🌙</button>
+        <button class="icon-btn nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="auth-wrap">
+      <div class="auth-card">
+        <h1>Welcome back 👋</h1>
+        <p class="muted" style="margin-bottom:24px">Sign in to manage your posts.</p>
+
+        <form id="loginForm" novalidate>
+          <div class="form-group">
+            <label for="loginEmail">Email address</label>
+            <input type="email" id="loginEmail" placeholder="you@example.com" autocomplete="email" />
+            <span class="field-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="loginPassword">Password</label>
+            <input type="password" id="loginPassword" placeholder="••••••••" autocomplete="current-password" />
+            <span class="field-error"></span>
+          </div>
+
+          <button type="submit" class="btn btn-block" id="loginBtn">Sign in</button>
+        </form>
+
+        <div class="divider">or</div>
+
+        <button class="btn btn-outline btn-block" id="demoLogin">🚀 Continue with demo account</button>
+
+        <p class="auth-alt">
+          Don't have an account? <a href="register.html">Register here</a>
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> Codomax Digital · MERN Internship — Module 1</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="register.html">Register</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

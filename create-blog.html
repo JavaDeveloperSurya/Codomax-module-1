@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Blog — Codomax Blog</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-logo">CD</span> Codomax Blog
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="create-blog.html">Create Blog</a>
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="nav-actions" id="navAuth"></div>
+        <button class="icon-btn" id="themeToggle" title="Toggle dark mode">🌙</button>
+        <button class="icon-btn nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="page-head">
+        <div>
+          <h1 id="formTitle">Create a new post</h1>
+          <p class="muted">Write, preview, and publish — all in one screen.</p>
+        </div>
+        <a class="btn btn-outline" href="dashboard.html">← Back to dashboard</a>
+      </div>
+
+      <div class="editor-layout">
+
+        <!-- ============ EDITOR FORM ============ -->
+        <form class="panel" id="blogForm" novalidate>
+          <h2 class="panel-title">📝 Post details</h2>
+
+          <div class="form-group">
+            <label for="postTitle">Title</label>
+            <input type="text" id="postTitle" placeholder="e.g. My First Week Learning the MERN Stack" />
+            <span class="field-error"></span>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="postCategory">Category</label>
+              <select id="postCategory">
+                <option>General</option>
+                <option>MERN</option>
+                <option>JavaScript</option>
+                <option>CSS</option>
+                <option>HTML</option>
+                <option>React</option>
+                <option>UX</option>
+                <option>Career</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="postEmoji">Cover emoji</label>
+              <input type="text" id="postEmoji" value="📄" maxlength="2" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="postCover">Cover image URL <span class="muted">(optional)</span></label>
+            <input type="url" id="postCover" placeholder="https://example.com/image.jpg" />
+            <span class="field-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="postExcerpt">Short excerpt <span class="muted">(optional — auto-filled if empty)</span></label>
+            <input type="text" id="postExcerpt" placeholder="One line that makes people want to read more." />
+          </div>
+
+          <div class="form-group">
+            <label for="postContent">Content</label>
+            <textarea id="postContent" placeholder="Write your post here…"></textarea>
+            <span class="field-error"></span>
+            <small class="muted" id="wordCount">0 words</small>
+          </div>
+
+          <div class="form-group">
+            <label for="postStatus">Status</label>
+            <select id="postStatus">
+              <option value="published">Published</option>
+              <option value="draft">Draft</option>
+            </select>
+          </div>
+
+          <div style="display:flex; gap:10px; flex-wrap:wrap">
+            <button type="submit" class="btn" id="submitBtn">Publish post</button>
+            <button type="button" class="btn btn-outline" id="saveDraftBtn">💾 Save draft locally</button>
+          </div>
+        </form>
+
+        <!-- ============ LIVE PREVIEW ============ -->
+        <aside class="panel preview-box">
+          <h2 class="panel-title">👁️ Live preview</h2>
+          <div class="preview-cover" id="previewCover">📄</div>
+          <span class="badge" id="previewBadge">General</span>
+          <h3 style="margin:12px 0 8px" id="previewTitle">Your post title will appear here</h3>
+          <p class="card-meta" id="previewMeta" style="margin-bottom:14px">General · 1 min read</p>
+          <p class="preview-body" id="previewBody">Start writing and your post will preview here…</p>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> Codomax Digital · MERN Internship — Module 1</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/create-blog.js"></script>
+</body>
+</html>
